@@ -32,6 +32,18 @@ case 'TIMESTAMP':
   break;
 ````
 
+Development Branch Requirement
+------------------------
+
+** Note:  This application requires a development branch of Meteor. **
+
+````json
+"meteor": {
+  "branch": "objectid-timestamp",
+  "git": "https://github.com/awatson1978/meteor.git"
+}
+````
+
 Licensing
 ------------------------
 
