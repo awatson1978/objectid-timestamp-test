@@ -1,0 +1,75 @@
+<head>
+  <title>objectid timestamp test</title>
+</head>
+
+<body>
+  {{> appLayout }}
+</body>
+
+<template name="appLayout">
+  <header id="navbarHeader">
+    <nav id="navbarHeader" class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">ObjectId Timestamp Test</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="pull-right nav navbar-nav">
+            <li><a href="https://github.com/awatson1978/meteor-cookbook">meteor cookbook</a></li>
+            <li><a href="https://github.com/awatson1978/panel-layout">source code</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="mainPanel">
+    {{> recordsListPage }}
+  </div>
+</template>
+
+
+<template name="recordsListPage">
+  <div id="recordsListPage">
+    <div class="container">
+
+        <div class="row">
+<!--           <div class="col col-md-6">
+            <input id="recordsSearchInput" type="text" class="form-control" placeholder="search..." />
+          </div> -->
+          <div class="col col-md-6">
+            <button id="addNewRecord" class="btn btn-default">Add New Record</button>
+            <button id="clearRecords" class="btn btn-default">Clear Records</button>
+          </div>
+        </div>
+      <hr/>
+
+      <table class="table table-hover table-striped tablesorter">
+        <thead>
+          <tr>
+            <th>ObjectID </th>
+            <th>ParseInt(_str.substring(0, 8), 16) * 1000))</th>
+            <th>getTimestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each recordsList}}
+            {{> recordRow }}
+          {{/each}}
+        </tbody>
+      </table>
+      <hr>
+    </div>
+  </div>
+</template>
+
+
+<template name="recordRow">
+  <tr class="recordRow">
+    <td>{{ _id }}</td>
+    <td>{{ getParseInt }}</td>
+    <td>{{ getTimestamp }}</td>
+  </tr>
+</template>

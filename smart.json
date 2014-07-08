@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "bootstrap-3": {},
+    "moment": {}
+  },
+  "meteor": {
+    "branch": "objectid-timestamp",
+    "git": "https://github.com/awatson1978/meteor.git"
+  }
+}
