@@ -35,7 +35,7 @@ case 'TIMESTAMP':
 Development Branch Requirement
 ------------------------
 
-** Note:  This application requires a development branch of Meteor. **
+**Note:  This application requires a development branch of Meteor.**  
 
 ````json
 "meteor": {
